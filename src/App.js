@@ -1,12 +1,16 @@
-import React from 'react';
-import './App.css';
-import PageSlider from './components/PageSlider';
-import styles from './styles/style.Module.css'
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 
-function App() {
-  return (
-    <PageSlider />
-  );
-}
+import Container from "./components/Container";
+import Navigation from "./components/Navigation";
 
-export default App;
+const App = () => (
+  <Router>
+    <div>
+      <Navigation />
+      <Container />
+    </div>
+  </Router>
+);
+
+export default App
