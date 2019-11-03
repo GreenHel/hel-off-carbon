@@ -2,6 +2,7 @@ import ZingChart from "zingchart-react";
 import React, { Component } from "react";
 
 const Barometer = props => {
+  const { kWh, date } = props;
   const chartConfig = {
     graphset: [
       {
@@ -13,13 +14,13 @@ const Barometer = props => {
         x: "0px",
         y: "0px",
         title: {
-          text: "Engine RX 2564",
+          text: "kWh",
           bold: false,
           fontColor: "#515151",
           y: "80%"
         },
         subtitle: {
-          text: "rpm",
+          text: date,
           bold: false,
           fontSize: "15px",
           y: "59%"
@@ -41,7 +42,7 @@ const Barometer = props => {
           sizeFactor: 0.55
         },
         scaleR: {
-          values: "0:10:1",
+          values: "0:2000:200",
           aperture: 320,
           center: {
             visible: false
@@ -58,7 +59,7 @@ const Barometer = props => {
           }
         },
         scaleR2: {
-          values: "0:100:10",
+          values: "0:2000:200",
           aperture: 290,
           center: {
             backgroundColor: "#BEBEBE",
@@ -91,7 +92,7 @@ const Barometer = props => {
         },
         series: [
           {
-            values: [50],
+            values: [kWh],
             valueBox: {
               text: "%v",
               fontColor: "#515151",
