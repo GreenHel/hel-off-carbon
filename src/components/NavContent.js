@@ -14,8 +14,6 @@ class NavContent extends Component {
     const { currentMonth } = this.state;
 
     const response = await axios.get(
-      `https://cors-anywhere.herokuapp.com/https://nuukacustomerwebapi.azurewebsites.net/api/v2.0/GetMonthlyKPIs/?&building=1748&starttime=2019-${currentMonth -
-        2}-1&endtime=2019-${currentMonth}-31&kpiids=2&$format=json&$token=dUlWYjY3T0l3b2MrSTVOWlFkM1hQUG5vL1Q4MEZjdnFERDZvVmxwRFUwUT06anVoby5wZXNzaTo2MzcwODM4MzI4NjU4MjAwNjc6VHJ1ZQ==`
     );
 
     this.setState({
