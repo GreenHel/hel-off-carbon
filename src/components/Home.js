@@ -1,15 +1,24 @@
 import React from "react";
 import styled from "styled-components";
+<<<<<<< HEAD
 import Countdown from "./Countdown";
 
 const currentDate = new Date();
 const year = (currentDate.getMonth() === 11 && currentDate.getDate() > 23) ? currentDate.getFullYear() + 1 : currentDate.getFullYear();
+=======
+import Navigation from "./Navigation";
+>>>>>>> a50a5a840d5c78f203b6c689babe7c452e2d5119
 
 function Home() {
   return (
     <Wrapper>
+<<<<<<< HEAD
       <div className="title">HEL OFF CARBON EVENT HAPPENING IN:</div>
       <Countdown date={`${year}-12-24T00:00:00`} />
+=======
+    <Navigation />
+      <div className="title">HELL OF CARBOOON</div>
+>>>>>>> a50a5a840d5c78f203b6c689babe7c452e2d5119
       <section>
         <h1>12301253252kWh</h1>
       </section>
@@ -18,15 +27,19 @@ function Home() {
 }
 
 const Wrapper = styled.div`
+<<<<<<< HEAD
 min-height: calc(100vh - 50px);
 background-color: #2A2A2A;
+=======
+min-height: 100vh;
+background-color: #191919;
+>>>>>>> a50a5a840d5c78f203b6c689babe7c452e2d5119
 color: #fff;
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
 text-align: center;
-padding: 70px;
 
   div.title {
     font-size: 40px;
