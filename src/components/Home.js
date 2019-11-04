@@ -8,7 +8,7 @@ const year = (currentDate.getMonth() === 11 && currentDate.getDate() > 23) ? cur
 function Home() {
   return (
     <Wrapper>
-      <div className="title">HEL OFF CARBON EVENT</div>
+      <div className="title">HEL OFF CARBON EVENT HAPPENING IN:</div>
       <Countdown date={`${year}-12-24T00:00:00`} />
       <section>
         <h1>12301253252kWh</h1>
