@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import PageSlider from './components/PageSlider';
+import PageSlider from './Components/PageSlider';
 
 function App() {
   return (
