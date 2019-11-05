@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Countdown from "./Countdown";
 import Navigation from "./Navigation";
+import LineChart from "./LineChart";
 
 const currentDate = new Date();
 const year = (currentDate.getMonth() === 11 && currentDate.getDate() > 23) ? currentDate.getFullYear() + 1 : currentDate.getFullYear();
@@ -9,11 +10,13 @@ const year = (currentDate.getMonth() === 11 && currentDate.getDate() > 23) ? cur
 function Home() {
   return (
     <Wrapper>
-      <Navigation />
       <div className="title">HEL OFF CARBON EVENT HAPPENING IN:</div>
       <Countdown date={`${year}-12-24T00:00:00`} />
       <section>
-        <h1>12301253252kWh</h1>
+        <div className="heltext">
+        Hel<br />Off<br />Energy
+        </div>
+        <LineChart />
       </section>
     </Wrapper>
   );
@@ -34,9 +37,16 @@ text-align: center;
     font-weight: bold;
   }
   section {
-    p {
-      font-size: 20px;
-    }
+    display: flex;
+    flex-direction: row;
+  
+  }
+  
+  .heltext {
+    font-family: Neon;
+    font-size: 50px;
+    text-align: left;
+    
   }
 
   .Countdown{

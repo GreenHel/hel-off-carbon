@@ -35,7 +35,7 @@ function What() {
 
 const Wrapper = styled.div`
 min-height: 100vh;
-background-color: #191919;
+background-color: #2A2A2A;
 color: #fff;
 display: flex;
 flex-direction: row;

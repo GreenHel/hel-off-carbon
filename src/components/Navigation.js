@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 function Navigation() {
   return (
@@ -8,7 +8,10 @@ function Navigation() {
       <div >
       <ul className='ul'>
         <li>
-          <NavLink className='link' to="/">Home</NavLink>
+          <Link className='link' onClick={() => window.scrollTo({
+  top: 0,
+  behavior: 'smooth',
+})}>Home</Link>
         </li>
         <li>
           <NavLink className='link' activeClassName='glow' to="/what">what</NavLink>
@@ -26,7 +29,7 @@ function Navigation() {
 }
 
 const Wrapper = styled.div`
-background-color: #191919;
+background-color: #2A2A2A;
 color: #fff;
 display: flex;
 flex-direction: row;
@@ -38,7 +41,7 @@ padding: 70px;
   .div {
     padding: 70px;
     font-family: Neon;
-    font-size: 50px;  
+    font-size: 80px;  
     color: #5a5a5a;
   }
   .ul {
