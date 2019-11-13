@@ -11,8 +11,8 @@ import How from './How'
 function Container({ location }) {
   return (
     <Wrapper>
+    <div style={{background: '#2A2A2A'}}>
       <TransitionGroup className="transition-group">
-        
         <CSSTransition
           key={location.key}
           timeout={{ enter: 300, exit: 300 }}
@@ -28,6 +28,7 @@ function Container({ location }) {
           </section>
         </CSSTransition>
       </TransitionGroup>
+      </div>
     </Wrapper>
   );
 }
@@ -52,11 +53,9 @@ const Wrapper = styled.div`
 }
 
 div.transition-group {
-  position: relative;
 }
 
 section.route-section {
-  position: absolute;
   width: 100%;
   top: 0;
   left: 0;
