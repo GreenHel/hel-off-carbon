@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Switch, Route, withRouter } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
-import Home from "./Home";
 import What from './What';
 import Why from './Why';
 import How from './How'

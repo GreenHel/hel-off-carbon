@@ -3,15 +3,15 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 import Container from "./components/Container";
 import Home from "./components/Home";
-import Footer from "./components/Footer"
+import Navigation from "./components/Navigation";
 
 const App = () => (
   <Router>
-    <div>
+    <div >
+      <Navigation name="topnav" />
       <Home />
       <Container />
       <div id>
-      <Footer />
       </div>
     </div>
   </Router>

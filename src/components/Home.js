@@ -15,7 +15,7 @@ function Home() {
       <Countdown date={`${year}-12-24T00:00:00`} />
       <section>
         <div className="heltext">
-        Hel<br />Off<br />Energy
+        Hel<br />Off<br />Carbon
         </div>
         <LineChart />
       </section>
