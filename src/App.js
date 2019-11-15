@@ -1,11 +1,19 @@
-import React from 'react';
-import './App.css';
-import PageSlider from './Components/PageSlider';
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import Container from "./components/Container";
+import Home from "./components/Home";
+import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 
-function App() {
-  return (
-    <PageSlider />
-  );
-}
+const App = () => (
+  <Router>
+    <div >
+      <Navigation name="topnav" />
+      <Home />
+      <Container />
+      <Footer />
+    </div>
+  </Router>
+);
 
-export default App;
+export default App

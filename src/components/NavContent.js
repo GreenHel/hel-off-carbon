@@ -1,6 +1,7 @@
 import React, { Component, useState, useEffect } from "react";
 import Barometer from "./Barometer";
 import axios from "axios";
+
 class NavContent extends Component {
   constructor(props) {
     super(props);
@@ -14,6 +15,8 @@ class NavContent extends Component {
     const { currentMonth } = this.state;
 
     const response = await axios.get(
+      `https://cors-anywhere.herokuapp.com/https://nuukacustomerwebapi.azurewebsites.net/api/v2.0/GetMonthlyKPIs/?&building=1748&starttime=2019-${currentMonth -
+        2}-1&endtime=2019-${currentMonth}-31&kpiids=2&$format=json&$token=${process.env.REACT_APP_API_KEY}`
     );
 
     this.setState({
