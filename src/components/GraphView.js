@@ -1,16 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-import InstaGrid from  "./InstaGrid";
+import LineChart from "./LineChart";
 
-function Footer() {
-  return (
-    <Wrapper>
-      <InstaGrid account="von_pessi" numberOfMediaElements={5} />
-    </Wrapper>
-  );
-}
-
-const Wrapper = styled.div`
+function GraphView() {
+    return (
+        <Wrapper>
+          <section>
+            <div className="heltext">
+            Hel<br />Off<br />Carbon
+            </div>
+            <LineChart />
+          </section>
+        </Wrapper>
+      );
+    }
+    
+    const Wrapper = styled.div`
 background-color: #2A2A2A;
 min-height: 100vh;
 color: #fff;
@@ -58,4 +63,4 @@ text-align: center;
   }
 `;
 
-export default Footer;
+    export default GraphView;

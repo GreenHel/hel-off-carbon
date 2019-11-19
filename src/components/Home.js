@@ -1,9 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import Countdown from "./Countdown";
-import Navigation from "./Navigation";
-import LineChart from "./LineChart";
-import InstaGrid from  "./InstaGrid";
 
 const currentDate = new Date();
 const year = (currentDate.getMonth() === 11 && currentDate.getDate() > 23) ? currentDate.getFullYear() + 1 : currentDate.getFullYear();
@@ -13,12 +10,6 @@ function Home() {
     <Wrapper>
       <div className="title">HEL OFF CARBON EVENT HAPPENING IN:</div>
       <Countdown date={`${year}-12-24T00:00:00`} />
-      <section>
-        <div className="heltext">
-        Hel<br />Off<br />Carbon
-        </div>
-        <LineChart />
-      </section>
     </Wrapper>
   );
 }
