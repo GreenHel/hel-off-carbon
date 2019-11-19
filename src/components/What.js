@@ -7,6 +7,7 @@ function What() {
   return (
     <Wrapper>
      <Navigation />
+      <Info>
       <section>
         <p>
         Helsingin kaupunkistrategiassa 2017–2021 tavoitteena on hiilineutraali Helsinki vuoteen 2035 mennessä. 
@@ -19,10 +20,17 @@ function What() {
         Millaisessa kaupungissa sinä haluat elää? Hiilineutraali Helsinki syntyy yhteistyöllä ja sinua tarvitaan. 
         Tervetuloa mukaan!
         </p>
-      </section>
+        </section>
+      </Info>
     </Wrapper>
   );
 }
+
+const Info = styled.div`
+  font-size: 20px;
+  line-height: 30px;
+  max-width: 600px;
+`;
 
 const Wrapper = styled.div`
 min-height: 100vh;
@@ -33,13 +41,13 @@ flex-direction: row;
 align-items: center;
 justify-content: center;
 text-align: center;
+`;
 
-div {
+const LogoText = styled.div`
   padding: 70px;
   font-family: Neon;
   font-size: 50px;  
   color: #5a5a5a;
-}
 `;
 
 export default What;
