@@ -1,11 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import InstaGrid from  "./InstaGrid";
 
-function Footer() {
+function Companies() {
   return (
     <Wrapper>
-      <InstaGrid account="von_pessi" numberOfMediaElements={5} />
+      <div className="title">add some company info</div>
     </Wrapper>
   );
 }
@@ -58,4 +57,4 @@ text-align: center;
   }
 `;
 
-export default Footer;
+export default Companies;

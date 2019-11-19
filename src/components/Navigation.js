@@ -4,7 +4,7 @@ import { NavLink, Link } from "react-router-dom";
 
 function ScrollPage() {
   window.scrollTo({
-    top: 1000,
+    top: 2000,
     behavior: 'smooth',
   })
 }
@@ -31,6 +31,9 @@ function Navigation(props) {
             </li>
             <li>
               <NavLink className='link' activeClassName='topglow' onClick={() => ScrollPage() } to="/how">how</NavLink>
+            </li>
+            <li>
+              <NavLink className='link' activeClassName='topglow'  to="/how">Companies</NavLink>
             </li>
           </ul>
         </div>
