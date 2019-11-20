@@ -46,7 +46,12 @@ const InstaGrid = ({ classes, media, account, status}: Props) => {
           </Grid>
         ))}
       {status === 'loading' && <p>Loading...</p>}
-      {status === 'failed' && <p>Check our Instagram here</p>}
+      {status === 'failed' && <p>Instragram load failed. Don't worry, check our Instagram <a
+                href='https://www.instagram.com/heloffenergy'
+                class='some_link'
+                target='_blank'
+                rel='noopener noreferrer'
+              >here!</a></p>}
     </Grid>
   );
 };
