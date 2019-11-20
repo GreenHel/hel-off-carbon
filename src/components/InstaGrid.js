@@ -29,7 +29,7 @@ export type Props = {
 
 const InstaGrid = ({ classes, media, account, status}: Props) => {
   return (
-    <Grid container spacing={0} className={classes.wrapper}>
+    <Grid container spacing={4} className={classes.wrapper}>
       {media &&
         status === 'completed' &&
         media.map(({ displayImage, id, postLink, accessibilityCaption }) => (
@@ -45,8 +45,8 @@ const InstaGrid = ({ classes, media, account, status}: Props) => {
             </ButtonBase>
           </Grid>
         ))}
-      {status === 'loading' && <p>loading...</p>}
-      {status === 'failed' && <p>Check instagram here</p>}
+      {status === 'loading' && <p>Loading...</p>}
+      {status === 'failed' && <p>Check our Instagram here</p>}
     </Grid>
   );
 };
