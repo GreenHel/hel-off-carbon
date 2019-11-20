@@ -1,60 +1,36 @@
 import React from "react";
 import styled from "styled-components";
+import Navigation from "./Navigation";
+
 
 function Companies() {
   return (
     <Wrapper>
-      <div className="title">add some company info</div>
+      <Navigation />
+      <section>
+      <>add some company info</>
+      </section>
     </Wrapper>
   );
 }
 
 const Wrapper = styled.div`
-background-color: #2A2A2A;
 min-height: 100vh;
+background-color: #2A2A2A;
 color: #fff;
 display: flex;
-flex-direction: column;
+flex-direction: row;
 align-items: center;
 justify-content: center;
 text-align: center;
 
-  div.title {
-    font-size: 40px;
-    font-weight: bold;
-  }
-  section {
-    display: flex;
-    flex-direction: row;
-  
-  }
-  
-  .heltext {
-    font-family: Neon;
-    font-size: 50px;
-    text-align: left;
-    
-  }
-
-  .Countdown{
-    margin: 10px auto;
-    padding-bottom: 20px;
-  }
-  
-  .Countdown-col{
-    display: inline-block;
-  }
-  
-  .Countdown-col-element{
-    display: inline-block;
-    margin: 0 20px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .Countdown-col-element strong{
-    font-size: 95px;
-  }
+div {
+  padding: 70px;
+  font-family: Neon;
+  font-size: 50px;  
+  color: #5a5a5a;
+}
 `;
+
 
 export default Companies;

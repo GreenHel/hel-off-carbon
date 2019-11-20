@@ -33,7 +33,7 @@ function Navigation(props) {
               <NavLink className='link' activeClassName='topglow' onClick={() => ScrollPage() } to="/how">how</NavLink>
             </li>
             <li>
-              <NavLink className='link' activeClassName='topglow'  to="/how">Companies</NavLink>
+              <NavLink className='link' activeClassName='topglow' onClick={() => ScrollPage() } to="/companies">companies</NavLink>
             </li>
           </ul>
         </div>
@@ -63,6 +63,9 @@ function Navigation(props) {
             </li>
             <li>
               <NavLink className='link' activeClassName='glow' to="/how">how</NavLink>
+            </li>
+            <li>
+              <NavLink className='link' activeClassName='glow' to="/companies">companies</NavLink>
             </li>
           </ul>
         </div>
