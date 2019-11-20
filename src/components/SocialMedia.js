@@ -26,6 +26,10 @@ const SomeContainer = styled.div`
       width: 50px;
       height: 50px;
   }
+  img{
+  max-width: 50px;
+  height: auto;
+  }
 `
 
 const SomeLeft = styled.div`
@@ -81,7 +85,8 @@ function SocialMedia () {
                 <span class='some_icon'>
                   <i class='facebook-f' />
                 </span>{' '}
-                Facebook
+                <img src={require('../images/f_logo_RGB-White_100.png')}
+                     alt='Facebook Logo'/>
               </a>
             </SomeLeft>
             <SomeCenter>
@@ -94,7 +99,9 @@ function SocialMedia () {
                 <span class='some_icon'>
                   <i class='instagram' />
                 </span>{' '}
-                Instagram
+                <img src={require('../images/f_logo_RGB-White_100.png')}
+                     alt='Instagram Logo'/>
+
               </a>
             </SomeCenter>
             <SomeRight>
@@ -107,7 +114,8 @@ function SocialMedia () {
                 <span class='some_icon'>
                   <i class='twitter' />
                 </span>{' '}
-                Twitter
+                <img src={require('../images/f_logo_RGB-White_100.png')}
+                     alt='Twitter Logo'/>
               </a>
             </SomeRight>
           </SomeContainer>
