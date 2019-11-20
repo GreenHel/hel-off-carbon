@@ -1,20 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-import Countdown from "./Countdown";
+import LineChart from "./LineChart";
 
-const currentDate = new Date();
-const year = (currentDate.getMonth() === 11 && currentDate.getDate() > 23) ? currentDate.getFullYear() + 1 : currentDate.getFullYear();
-
-function Home() {
-  return (
-    <Wrapper>
-      <div className="title">HEL OFF CARBON EVENT HAPPENING IN:</div>
-      <Countdown date={`${year}-12-24T00:00:00`} />
-    </Wrapper>
-  );
-}
-
-const Wrapper = styled.div`
+function GraphView() {
+    return (
+        <Wrapper>
+          <section>
+            <div className="heltext">
+            Hel<br />Off<br />Carbon
+            </div>
+            <LineChart />
+          </section>
+        </Wrapper>
+      );
+    }
+    
+    const Wrapper = styled.div`
 background-color: #2A2A2A;
 min-height: 100vh;
 color: #fff;
@@ -62,4 +63,4 @@ text-align: center;
   }
 `;
 
-export default Home;
+    export default GraphView;

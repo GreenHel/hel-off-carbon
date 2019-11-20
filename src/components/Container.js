@@ -6,6 +6,7 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 import What from './What';
 import Why from './Why';
 import How from './How'
+import Companies from './Companies'
 
 function Container({ location }) {
   return (
@@ -23,6 +24,7 @@ function Container({ location }) {
               <Route path="/what" component={What} />
               <Route path="/why" component={Why} />
               <Route path="/how" component={How} />
+              <Route path="/companies" component={Companies} />
             </Switch>
           </section>
         </CSSTransition>

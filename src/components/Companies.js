@@ -1,15 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import Countdown from "./Countdown";
 
-const currentDate = new Date();
-const year = (currentDate.getMonth() === 11 && currentDate.getDate() > 23) ? currentDate.getFullYear() + 1 : currentDate.getFullYear();
-
-function Home() {
+function Companies() {
   return (
     <Wrapper>
-      <div className="title">HEL OFF CARBON EVENT HAPPENING IN:</div>
-      <Countdown date={`${year}-12-24T00:00:00`} />
+      <div className="title">add some company info</div>
     </Wrapper>
   );
 }
@@ -62,4 +57,4 @@ text-align: center;
   }
 `;
 
-export default Home;
+export default Companies;
