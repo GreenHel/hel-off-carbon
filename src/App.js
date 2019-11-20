@@ -6,17 +6,11 @@ import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import SocialMedia from "./components/SocialMedia";
 import GraphView from "./components/GraphView";
+import PageSlider from './components/PageSlider'
+
 
 const App = () => (
-  <Router>
-    <div >
-      <Navigation name="topnav" />
-      <Home />
-      <GraphView />
-      <Container />
-      <Footer />
-    </div>
-  </Router>
+  <PageSlider />
 );
 
 export default App

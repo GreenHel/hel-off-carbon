@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Switch, Route, withRouter } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
-import What from './What';
+import What from './Pages';
 import Why from './Why';
 import How from './How'
 import Companies from './Companies'
