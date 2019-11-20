@@ -33,7 +33,7 @@ function Navigation(props) {
               <NavLink className='link' activeClassName='topglow' onClick={() => ScrollPage() } to="/how">how</NavLink>
             </li>
             <li>
-              <NavLink className='link' activeClassName='topglow' onClick={() => ScrollPage() } to="/how">Companies</NavLink>
+              <NavLink className='link' activeClassName='topglow' onClick={() => ScrollPage() } to="/companies">companies</NavLink>
             </li>
           </ul>
         </div>
@@ -181,6 +181,7 @@ text-align: center;
   
 
   .glow {
+    font-size: 80px;
     color: #fff;
     text-align: center;
     -webkit-animation: glow 1s ease-in-out infinite alternate;

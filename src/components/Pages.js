@@ -1,13 +1,15 @@
 import React from "react";
 import styled from "styled-components"; 
-import Navigation from "./Navigation";
 
 
-function What() {
+function Pages(props) {
+
+
   return (
     <Wrapper>
-     <Navigation />
+      <h1>{props.name}</h1>
       <section>
+        <p>{}</p>
         <p>
         Helsingin kaupunkistrategiassa 2017–2021 tavoitteena on hiilineutraali Helsinki vuoteen 2035 mennessä. 
         Tällöin Helsingissä tapahtuva toiminta ei enää lämmitä ilmastoa. 
@@ -42,4 +44,4 @@ div {
 }
 `;
 
-export default What;
+export default Pages;
