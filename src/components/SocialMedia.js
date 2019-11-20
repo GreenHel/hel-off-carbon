@@ -51,6 +51,11 @@ const MediaCard = styled.div`
   font-weight: bold
   margin: .5625rem auto 4.25rem;
   padding: 3rem;
+
+  h2 {
+      color: tomato;
+      font-size: 50px;
+  }
 `
 
 function SocialMedia () {
