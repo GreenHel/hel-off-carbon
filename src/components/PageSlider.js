@@ -3,6 +3,7 @@ import { FullPage, Slide } from "react-full-page";
 import Home from './Home'
 import Pages from './Pages'
 import GraphView from './GraphView'
+import SocialMedia from "./SocialMedia";
 import Footer from './Footer'
 
 
@@ -24,6 +25,9 @@ export default class PageSlider extends React.Component {
         </Slide>
         <Slide>
           <Pages name='how'/>
+        </Slide>
+        <Slide>
+          <SocialMedia />
         </Slide>
         <Slide>
           <Footer />

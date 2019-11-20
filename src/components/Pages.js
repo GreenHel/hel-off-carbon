@@ -22,7 +22,6 @@ function Pages(props) {
         Tervetuloa mukaan!
         </p>
         </section>
-      </Info>
     </Wrapper>
   );
 }
