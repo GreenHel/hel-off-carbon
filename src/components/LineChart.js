@@ -22,8 +22,12 @@ class LineChart extends React.Component {
           colors: ["#fff", "transparent"]
         },
         title: {
-          text: "Energy Consumption",
-          align: "left"
+          text: "Energy Consumption (kWh)",
+          align: "left",
+          style: {
+            fontSize: "20px",
+            color: "white"
+          }
         },
         grid: {
           show: false
@@ -42,7 +46,17 @@ class LineChart extends React.Component {
       series: [
         {
           name: "Desktops",
-          data: []
+          data: [23, 45, 35, 67, 89, 11],
+          style: {
+            fontSize: "20px",
+            color: "white"
+          }
+        }
+      ],
+      responsive: [
+        {
+          breakpoint: 1000,
+          options: {}
         }
       ]
     };
@@ -78,7 +92,7 @@ class LineChart extends React.Component {
           options={this.state.options}
           series={this.state.series}
           type="line"
-          width="500"
+          width="90%"
         />
       </div>
     );
