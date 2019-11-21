@@ -5,12 +5,13 @@ import Pages from './Pages'
 import GraphView from './GraphView'
 import SocialMedia from "./SocialMedia";
 import Footer from './Footer'
+import PageContent from '../content/PageContent'
 
 
 export default class PageSlider extends React.Component {
   render() {
     return (
-      <FullPage controls>
+      <FullPage>
         <Slide>
          <Home />
         </Slide>
@@ -18,13 +19,13 @@ export default class PageSlider extends React.Component {
           <GraphView />
         </Slide>
         <Slide>
-          <Pages name='what'/>
+          <Pages name={PageContent[0]}/>
         </Slide>
         <Slide>
-          <Pages name='why'/>
+          <Pages name={PageContent[1]}/>
         </Slide>
         <Slide>
-          <Pages name='how'/>
+          <Pages name={PageContent[2]}/>
         </Slide>
         <Slide>
           <SocialMedia />
