@@ -35,6 +35,10 @@ flex-direction: row;
 align-items: center;
 justify-content: center;
 text-align: center;
+
+h1{
+font-family: Neon;
+}
 `;
 
 const LogoText = styled.div`
