@@ -16,7 +16,12 @@ const SomeContainer = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
+  text-align:center;
   margin: 0 auto;
+  justify-content:space-around; 
+  padding: 16px  0 16px 0;
+ 
+ 
   a {
     color: pink;
     text-decoration: none;
@@ -29,24 +34,23 @@ const SomeContainer = styled.div`
   img{
   max-width: 50px;
   height: auto;
+ 
   }
 `
 
 const SomeLeft = styled.div`
   width: 33.333%;
-  text-align: left;
   margin-left: 1em;
   margin-right: 1em;
 `
 
 const SomeCenter = styled.div`
   width: 33.333%;
-  text-align: center;
+
 `
 
 const SomeRight = styled.div`
   width: 33.333%;
-  text-align: right;
   margin-left: 1em;
   margin-right: 1em;
 `
@@ -76,45 +80,20 @@ function SocialMedia () {
           <h3>Our social media channels:</h3>
           <SomeContainer>
             <SomeLeft>
-              <a
-                href='https://www.facebook.com/heloffenergy'
-                class='some_link'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                <span class='some_icon'>
-                  <i class='facebook-f' />
-                </span>{' '}
+              <a href='https://www.facebook.com/heloffenergy'>
                 <img src={require('../images/f_logo_RGB-White_100.png')}
                      alt='Facebook Logo'/>
               </a>
             </SomeLeft>
             <SomeCenter>
-              <a
-                href='https://www.instagram.com/heloffenergy'
-                class='some_link'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                <span class='some_icon'>
-                  <i class='instagram' />
-                </span>{' '}
-                <img src={require('../images/f_logo_RGB-White_100.png')}
+              <a href='https://www.instagram.com/heloffenergy'>
+                <img src={require('../images/instagram_logo.png')}
                      alt='Instagram Logo'/>
-
               </a>
             </SomeCenter>
             <SomeRight>
-              <a
-                href='https://twitter.com/heloffenergy'
-                class='some_link'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                <span class='some_icon'>
-                  <i class='twitter' />
-                </span>{' '}
-                <img src={require('../images/f_logo_RGB-White_100.png')}
+              <a href='https://twitter.com/heloffenergy'>
+                <img src={require('../images/Twitter_Logo_WhiteOnImage.png')}
                      alt='Twitter Logo'/>
               </a>
             </SomeRight>
