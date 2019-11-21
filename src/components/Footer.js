@@ -1,61 +1,89 @@
-import React from "react";
-import styled from "styled-components";
-import InstaGrid from  "./InstaGrid";
-
-function Footer() {
-  return (
-    <Wrapper>
-      <InstaGrid account="von_pessi" numberOfMediaElements={5} />
-    </Wrapper>
-  );
-}
+import React from 'react'
+import styled from 'styled-components'
 
 const Wrapper = styled.div`
-background-color: #2A2A2A;
-min-height: 100vh;
-color: #fff;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-text-align: center;
+  background-color: #2a2a2a;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.0975);
+`
 
-  div.title {
-    font-size: 40px;
-    font-weight: bold;
-  }
-  section {
-    display: flex;
-    flex-direction: row;
-  
-  }
-  
-  .heltext {
-    font-family: Neon;
-    font-size: 50px;
-    text-align: left;
-    
-  }
+const FooterContainer = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+`
 
-  .Countdown{
-    margin: 10px auto;
-    padding-bottom: 20px;
-  }
-  
-  .Countdown-col{
-    display: inline-block;
-  }
-  
-  .Countdown-col-element{
-    display: inline-block;
-    margin: 0 20px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .Countdown-col-element strong{
-    font-size: 95px;
-  }
-`;
+const FooterLeft = styled.div`
+  width: 33.333%;
+  text-align: left;
+  margin-left: 1em;
+  margin-right: 1em;
+`
 
-export default Footer;
+const FooterCenter = styled.div`
+  width: 33.333%;
+  text-align: center;
+`
+
+const FooterRight = styled.div`
+  width: 33.333%;
+  text-align: right;
+  margin-left: 1em;
+  margin-right: 1em;
+`
+
+const MediaCard = styled.div`
+  font-weight: bold
+  margin: .5625rem auto 4.25rem;
+`
+
+const SponsorImage = styled.img`
+  max-width: 100%;
+  max-height: 100%;
+`
+
+function Footer () {
+  return (
+    <Wrapper>
+      <div id='footer'>
+        <MediaCard>
+          <h3>In accociation with:</h3>
+          <FooterContainer>
+            <FooterLeft>
+              <a href='https://www.metropolia.fi/'>
+                <SponsorImage
+                  src={require('../images/metropolia-logo-in-english-image.png')}
+                  alt='Metropolia Logo'
+                />
+              </a>
+            </FooterLeft>
+            <FooterCenter>
+              <a href='https://www.hel.fi/helsinki/fi'>
+                <SponsorImage
+                  src={require('../images/helsinki_logo-image.png')}
+                  alt='Helsinki Logo'
+                />
+              </a>
+            </FooterCenter>
+            <FooterRight>
+              <a href='https://hri.fi/'>
+                <SponsorImage
+                  src={require('../images/hri_logo-image.png')}
+                  alt='Helsinki Regional Infoshare Logo'
+                />
+              </a>
+            </FooterRight>
+          </FooterContainer>
+        </MediaCard>
+      </div>
+    </Wrapper>
+  )
+}
+
+export default Footer

@@ -13,11 +13,18 @@ return (
         <p>{props.name.content1}</p>
         <p>{props.name.content2}</p>
       </section>
+
     </Wrapper>
   );
 }
 Pages.defaultProps = {name:'content'};
 
+
+const Info = styled.div`
+  font-size: 20px;
+  line-height: 30px;
+  max-width: 600px;
+`;
 
 const Wrapper = styled.div`
 min-height: 100vh;
@@ -28,13 +35,13 @@ flex-direction: row;
 align-items: center;
 justify-content: center;
 text-align: center;
+`;
 
-div {
+const LogoText = styled.div`
   padding: 70px;
   font-family: Neon;
   font-size: 50px;  
   color: #5a5a5a;
-}
 `;
 
 export default Pages;
