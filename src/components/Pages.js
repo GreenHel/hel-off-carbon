@@ -8,17 +8,21 @@ function Pages(props) {
 
 return (
     <Wrapper>
+    <TextBox>
       <h1>{props.name.name}</h1>
       <section>
         <p>{props.name.content1}</p>
         <p>{props.name.content2}</p>
       </section>
-
+      </TextBox>
     </Wrapper>
   );
 }
 Pages.defaultProps = {name:'content'};
 
+const TextBox = styled.div`
+  max-width: 610px
+`;
 
 const Info = styled.div`
   font-size: 20px;
@@ -38,7 +42,20 @@ text-align: center;
 
 h1{
 font-family: Neon;
+  margin-left: 1em;
+  margin-right: 1em;
 }
+p {
+  margin-left: 1em;
+  margin-right: 1em;
+  text-align: left;
+}
+
+@media only screen and (max-width: 610px) {
+    flex-direction: column;
+    justify-content: center;
+  }
+
 `;
 
 const LogoText = styled.div`
