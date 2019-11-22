@@ -8,7 +8,7 @@ const year = (currentDate.getMonth() === 11 && currentDate.getDate() > 23) ? cur
 function Home() {
   return (
     <Wrapper>
-      <div className="title">HEL OFF CARBON EVENT HAPPENING IN:</div>
+      <div className="title">HELSINKI CLIMATE DAY</div>
       <Countdown date={`${year}-12-24T00:00:00`} />
     </Wrapper>
   );
@@ -25,20 +25,27 @@ justify-content: center;
 text-align: center;
 
   div.title {
-    font-size: 40px;
-    font-weight: bold;
+    font-family: neon;
+    font-size: 16px;
+    font-weight: bold; 
   }
+
+  @media screen and (min-width: 320px) {
+    div.title {
+      font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+    }
+  }
+  @media screen and (min-width: 1000px) {
+    div.title {
+      font-size: 40px;
+    }
+  }
+
+
   section {
     display: flex;
     flex-direction: row;
   
-  }
-  
-  .heltext {
-    font-family: Neon;
-    font-size: 50px;
-    text-align: left;
-    
   }
 
   .Countdown{
@@ -57,8 +64,24 @@ text-align: center;
     flex-direction: column;
   }
   
-  .Countdown-col-element strong{
-    font-size: 95px;
+ 
+  .Countdown-col-element {
+    font-size: 20px;
+    font-weight: bold; 
+  }
+
+  @media screen and (min-width: 320px) {
+    .Countdown-col-element {
+      font-size: calc(22px + 6 * ((100vw - 320px) / 680));
+      font-weight: bold; 
+
+    }
+  }
+  @media screen and (min-width: 1000px) {
+    .Countdown-col-element {
+      font-size: 90px;
+      font-weight: bold;
+    }
   }
 `;
 
