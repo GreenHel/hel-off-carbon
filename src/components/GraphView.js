@@ -37,23 +37,20 @@ function GraphView() {
   );
 }
 const Background = styled.div`
-background-color: #000;
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: center;
+  background-color: #2a2a2a;
 `;
 
 const Wrapper = styled.div`
-  background-color: ##2a2a2a;
+  background-color: #7a7d7d;
   min-height: 100vh;
-  min-width: 95%;
+  max-width:95%;
   color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding-left: 20px;
 
   div.title {
     font-size: 40px;
