@@ -43,8 +43,13 @@ align-items: center;
 justify-content: space-betweens;
 text-align: center;
 
-
 }
+
+@media only screen and (max-width: 610px) {
+    flex-direction: column;
+    justify-content: center;
+  }
+
 `;
 
 

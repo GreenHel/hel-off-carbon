@@ -12,11 +12,12 @@ const PageContent = [
     },
     {
         name: 'Why?',
-        content1: 'why page content',
+        content1: 'Vähentämällä sähkönkulutusta, voit vaikuttaa myös omaan sähkölaskuusi, ja täten vähentää omaa hiilijalanjälkeäsi.\n',
+        content2: 'Tällä sivustolla pyrimme listaamaan asioita, joita voit itse tehdä vähentääksesi omaa energian kulutustasi!'
     },
     {
         name: 'How?',
-        content2: 'how page content',
+        content2: 'Mitä voisit siis itse tehdä? ',
     },
 ]
 
