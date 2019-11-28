@@ -1,23 +1,23 @@
-/* eslint-disable no-multi-str */
 const PageContent = [
-    {
-        name: 'what?',
-        content1: 'Helsingin kaupunkistrategiassa 2017–2021 tavoitteena on hiilineutraali Helsinki vuoteen 2035 mennessä. \
-        Tällöin Helsingissä tapahtuva toiminta ei enää lämmitä ilmastoa.\
-        Hiilineutraali Helsinki 2035 -toimenpideohjelma kertoo, kuinka Helsinki pääsee päästövähennyksissä oikealle uralle.',
-        content2: 'Pyrimme järjestämään asiat niin, että ilmastoystävällinen elämä olisi helsinkiläisille ja Helsingissä vieraileville mahdollisimman helppoa.\
-        Kaupunki pystyy tekemään paljon, mutta helsinkiläisten valinnat ratkaisevat. \
-        Millaisessa kaupungissa sinä haluat elää? Hiilineutraali Helsinki syntyy yhteistyöllä ja sinua tarvitaan.\
-        Tervetuloa mukaan!'
+
+    {   
+        id: '01',
+        name: 'Ilman sähköä',
+        content: 'Pyri elämään tunti ilman sähkölaitteita. Tämä tarkoittaa \n' +
+        'televisiota, tietokonetta ja tärkeimmiten, kännykkää',
+        img: '../images/electric.jpg',
     },
-    {
-        name: 'Why?',
-        content1: 'why page content',
-    },
-    {
-        name: 'How?',
-        content2: 'how page content',
-    },
+    {   id: '02',
+        name: 'Suosi vegaaniruokaa',
+        content: 'Edullista vegaaniruokaa\n' +
+        'Perusraaka-aineista tehty vegaaniruoka voi olla hyvinkin edullista.',
+        img: '../images/vegan.jpg',
+    }, {  
+        id: '03',
+        name: 'Suosi Julkisia',
+        content: 'Kulje auton sijaan jukisilla tai kävellen/pyörällä',
+        img: '../images/moving.jpg',
+},
 ]
 
 export default PageContent;

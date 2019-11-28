@@ -2,19 +2,18 @@ import React from "react";
 import styled from "styled-components";
 import VeganImage from "../images/vegan.jpg"
 
-function VeganChallenge() {
+function VeganChallenge(props) {
+    
 
     return (
         <Card>
-            <BackroundImage>
+            <BackGroundImage>
             <TextCard>
-                <h1>02</h1>
-                <h2>VEGAN</h2>
-                <p>Edullista vegaaniruokaa
-                Perusraaka-aineista tehty vegaaniruoka voi olla hyvinkin edullista.\
-        </p>
+                <h1>{props.name.id}</h1>
+                <h1>{props.name.name}</h1>
+                <p>{props.name.content}</p>
             </TextCard>
-            </BackroundImage>
+            </BackGroundImage>
 
             <PictureCard>
             </PictureCard>
@@ -24,19 +23,25 @@ function VeganChallenge() {
 }
 
 
-const BackroundImage = styled.div`
+const BackGroundImage = styled.div`
 
-background-image: url(${VeganImage});
-    opacity: 0.5;
+    background:
+    linear-gradient(to top, transparent 30%, #2a2a2a 90%),
+    linear-gradient(to bottom, transparent 30%, #2a2a2a 90%),
+    linear-gradient(to left, transparent 30%, #2a2a2a 90%),
+    linear-gradient(to right, transparent 30%, #2a2a2a 90%),
+    url(${VeganImage});
+    
     background-size: cover;
 
     background-repeat: no-repeat;
     background-size: contain;
-    height: 60vh;
     width: 100%;
+    height: 500px;
 
     @media only screen and (min-width: 768px) {
     background-image: none;
+    opacity: 1;
     }
 
 `
@@ -57,7 +62,7 @@ justify-content: space-between;
 const TextCard = styled.div`
 
     text-align: left;
-
+    margin: 10%;
 
 @media only screen and (min-width: 768px) {
 
@@ -65,7 +70,6 @@ const TextCard = styled.div`
     flex-direction: column;
     align-items: flex-start;
     width: 50%;
-    text-align: left;
 }
 `;
 const PictureCard = styled.div`
