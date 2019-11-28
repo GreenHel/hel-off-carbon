@@ -16,6 +16,7 @@ const useStyles = makeStyles(theme => ({
 }));
 function GraphView() {
   return (
+    <Background>
     <Wrapper>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={3}>
@@ -32,19 +33,25 @@ function GraphView() {
         </Grid>
       </Grid>
     </Wrapper>
+    </Background>
   );
 }
+const Background = styled.div`
+background-color: #f2f1ed;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+`;
 
 const Wrapper = styled.div`
-  background-color: #2a2a2a;
-  min-height: 100vh;
+  min-width:95%;
   color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-left: 20px;
 
   div.title {
     font-size: 40px;
