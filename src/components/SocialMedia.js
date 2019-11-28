@@ -58,7 +58,7 @@ const SomeRight = styled.div`
 const MediaCard = styled.div`
   font-weight: bold
   margin: .5625rem auto 4.25rem;
-  padding: 3rem;
+  /* padding: 3rem; */
 
   h2 {
       color: tomato;
@@ -74,7 +74,7 @@ function SocialMedia () {
           <h2>@heloffenergy</h2>
           <p>
             Join the discussion on the social media channels with the tag
-            #hiilineutraalihelsinki.
+            #hiilineutraalihelsinki or #hiilineutraalipäivä.
           </p>
           <InstaGrid account='von_pessi' numberOfMediaElements={3} />
           <h3>Our social media channels:</h3>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 class Countdown extends Component {
   constructor(props) {
@@ -80,30 +80,30 @@ class Countdown extends Component {
       <div className="Countdown">
         <span className="Countdown-col">
           <span className="Countdown-col-element">
-              <strong>{this.addLeadingZeros(countDown.days)}</strong>
-              <span>{countDown.days === 1 ? 'Day' : 'Days'}</span>
+              <strong className="Countdown-col-element-strong">{this.addLeadingZeros(countDown.days)}</strong>
+              <span className="Countdown-col-element-span">{countDown.days === 1 ? 'Day' : 'Days'}</span>
           </span>
         </span>
 
         <span className="Countdown-col">
           <span className="Countdown-col-element">
-            <strong>{this.addLeadingZeros(countDown.hours)}</strong>
-            <span>Hours</span>
+            <strong className="Countdown-col-element-strong">{this.addLeadingZeros(countDown.hours)}</strong>
+            <span className="Countdown-col-element-span">Hours</span>
           </span>
         </span>
 
 
         <span className="Countdown-col">
           <span className="Countdown-col-element">
-            <strong>{this.addLeadingZeros(countDown.min)}</strong>
-            <span>Min</span>
+            <strong className="Countdown-col-element-strong">{this.addLeadingZeros(countDown.min)}</strong>
+            <span className="Countdown-col-element-span">Min</span>
           </span>
         </span>
 
         <span className="Countdown-col">
           <span className="Countdown-col-element">
-            <strong>{this.addLeadingZeros(countDown.sec)}</strong>
-            <span>Sec</span>
+            <strong className="Countdown-col-element-strong">{this.addLeadingZeros(countDown.sec)}</strong>
+            <span className="Countdown-col-element-span">Sec</span>
           </span>
         </span>
       </div>

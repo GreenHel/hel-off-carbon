@@ -29,7 +29,8 @@ export type Props = {
 
 const InstaGrid = ({ classes, media, account, status}: Props) => {
   return (
-    <Grid container spacing={4} className={classes.wrapper}>
+    <div style={{ padding: 20 }}>
+    <Grid container gutter={0} spacing={3} className={classes.wrapper} >
       {media &&
         status === 'completed' &&
         media.map(({ displayImage, id, postLink, accessibilityCaption }) => (
@@ -53,6 +54,7 @@ const InstaGrid = ({ classes, media, account, status}: Props) => {
                 rel='noopener noreferrer'
               >here!</a></p>}
     </Grid>
+    </div>
   );
 };
 
