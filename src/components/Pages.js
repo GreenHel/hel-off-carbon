@@ -2,19 +2,24 @@ import React from "react";
 import styled from "styled-components"; 
 import VeganChallenge from "./VeganChallenge";
 import ElectricChallenge from "./ElectricChallenge";
+import PageContent from "../content/PageContent";
+import ElectricImage from '../images/electric.jpg'
+import VeganImage from '../images/vegan.jpg'
+import MovingImage from '../images/moving.jpg'
+
 
 
 function Pages(props) {
 
-  console.log(props.dark)
 
 
 return (
 
   <Background>
     <Wrapper>
-    <ElectricChallenge />
-    <VeganChallenge />
+    <ElectricChallenge  name={PageContent[0]} img={ElectricImage} />
+    <VeganChallenge name={PageContent[1]} img={VeganImage} />
+    <ElectricChallenge  name={PageContent[2]} img={MovingImage} />
     </Wrapper>
     </Background>
   );
@@ -25,7 +30,7 @@ background-color: #2a2a2a;
 display: flex;
 flex-direction: row;
 align-items: center;
-justify-content: center;
+justify-content: space-between;
 padding: 15px;
 `;
 
