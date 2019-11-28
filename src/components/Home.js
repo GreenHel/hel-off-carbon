@@ -44,7 +44,6 @@ const buildingHeight = ['70%',
   
 
 function Home() {
-  console.log(cityParams)
 
   return (
     <Background>
@@ -59,7 +58,7 @@ function Home() {
 }
 
 const Background = styled.div`
-  background-color: #000;
+  background-color: #2a2a2a;
   `;
 
 const Content = styled.div`
