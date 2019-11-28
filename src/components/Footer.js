@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
-  border-top: 1px solid rgba(0, 0, 0, 0.0975);
+  /* border-top: 1px solid rgba(0, 0, 0, 0.0975); */
 `
 
 const FooterContainer = styled.div`
