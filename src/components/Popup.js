@@ -4,7 +4,7 @@ import ElectricImage from "../images/electric.jpg";
 
 const BackGroundImage = styled.div`
   background: url(${props => props.img.url});
-  width: 100%;
+  max-width: 100%;
   height: 290px;
 `;
 
@@ -24,7 +24,7 @@ function PopupComponent(props) {
   };
 
   return (
-    <div style={{ color: "black" }}>
+    <div style={{ color: "black", margin: "0 auto", maxWidth: "390px" }}>
       <h1>{props.name.name}</h1>
       <section>
         <p>{props.name.content}</p>
