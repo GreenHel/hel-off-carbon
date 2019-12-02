@@ -4,7 +4,7 @@ const PageContent = [
         id: '01',
         name: 'Ilman sähköä',
         content: 'Pyri elämään tunti ilman sähkölaitteita. Tämä tarkoittaa \n' +
-        'televisiota, tietokonetta ja tärkeimmiten, kännykkää',
+        'televisiota, tietokonetta ja tärkeimpänä: Omaa kännykkääsi.',
         img: '../images/electric.jpg',
     },
     {   id: '02',

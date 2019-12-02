@@ -43,7 +43,7 @@ const Card = styled.div`
 const PictureCard = styled.div`
 
 @media only screen and (min-width: 768px) {
-    height: 500px;
+    height: 400px;
     width: 500px;
     z-index: 1;
     position: absolute;

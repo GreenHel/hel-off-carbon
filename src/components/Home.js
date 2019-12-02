@@ -11,7 +11,7 @@ const year =
 
 const city = ['0% 0%', '100% 0%', '100% 70%']
 
-const buildingHeight = ['70%', '65%', '60%', '67%']
+const buildingHeight = ['95%', '90%', '85%', '87%']
 
 var i
 var y
@@ -36,17 +36,17 @@ function Home () {
       <Wrapper>
         <Content>
           <div className='title'>HIILINEUTRAALIPÄIVÄ</div>
-          <Countdown date={`${year}-12-30T00:00:00`} />
-          <div className='hashtag-title'>#hiilineutraalihaaste</div>
-          <p>Lorem ipsum</p>
+          <Countdown date={`${year}-12-24T00:00:00`} />
         </Content>
       </Wrapper>
     </Background>
+    
   )
 }
 
 const Background = styled.div`
   background-color: #2a2a2a;
+  width: 100%;
 `
 
 const Content = styled.div`
@@ -81,7 +81,7 @@ const Wrapper = styled.div`
   background-size: cover;
 
   clip-path: polygon(${cityParams});
-  min-height: 100vh;
+  height: 70vh;
 
   div.title {
     font-size: 30px;
@@ -93,8 +93,12 @@ const Wrapper = styled.div`
     margin-bottom: 50px;
   }
 
-  div.hashtag {
-    font-size: ;
+  div.hashtag-title {
+    font-size: 30px;
+  }
+
+  div.elements {
+    bottom: 15%;
   }
 
 @media
