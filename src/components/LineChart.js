@@ -1,6 +1,7 @@
 import React from "react";
 import Chart from "react-apexcharts";
 import axios from "axios";
+import { whileStatement } from "@babel/types";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 class LineChart extends React.Component {
@@ -15,7 +16,12 @@ class LineChart extends React.Component {
           }
         },
         dataLabels: {
-          enabled: true
+          enabled: true,
+          style: {
+            fontSize: "14px",
+            fontFamily: "Helvetica, Arial, sans-serif",
+            colors: "red"
+          }
         },
         stroke: {
           curve: "straight",
