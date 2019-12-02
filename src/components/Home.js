@@ -56,6 +56,11 @@ const Content = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding-top: 150px;
+
+  @media only screen and (min-width: 768px) {
+  padding-top: 0px;
+}
 `
 
 const Wrapper = styled.div`

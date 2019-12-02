@@ -25,24 +25,28 @@ const Background = styled.div`
   height: auto;
 `
 
-const Content = styled.div`
-  background-color: #2a2a2a;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-`
-
 const Wrapper = styled.div`
   text-align: left;
   padding: 10%;
-  h1.hashtag-title {
+
+@media only screen and (min-width: 768px) {
+  width: 45%;
+  margin-left: auto;
+  margin-right: auto;
+`
+
+const Content = styled.div`
+  background-color: #2A2A2A;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+
+    h1.hashtag-title {
     font-size: 32px;
     font-family: 'futura-pt-bold', sans-serif;
     text-transform: lowercase;
     font-style: normal;
     font-weight: 700;
-
-    margin-bottom: 0%;
   }
 
   p.hashtag-text {

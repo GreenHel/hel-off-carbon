@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import VeganChallenge from "./VeganChallenge";
-import ElectricChallenge from "./ElectricChallenge";
+import VeganChallenge from "./ChallengeVegan";
+import ElectricChallenge from "./ChallengeElectric";
+import ChallengeMove from "./ChallengeMove";
 import PageContent from "../content/PageContent";
 import ElectricImage from "../images/electric.jpg";
 import VeganImage from "../images/vegan.jpg";
@@ -26,7 +27,7 @@ function Pages(props) {
             <PopupComponent name={PageContent[3]} img={EatLessImage} />
           </div>
         </Popup>
-        <ElectricChallenge name={PageContent[2]} img={MovingImage} />
+        <ChallengeMove name={PageContent[2]} img={MovingImage} />
       </Wrapper>
     </Background>
   );

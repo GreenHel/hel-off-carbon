@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-function VeganChallenge(props) {
+function ChallengeVegan(props) {
   return (
     <Card>
       <BackGroundImage image={props.img}>
@@ -74,4 +74,4 @@ const PictureCard = styled.div`
   }
 `;
 
-export default VeganChallenge;
+export default ChallengeVegan;

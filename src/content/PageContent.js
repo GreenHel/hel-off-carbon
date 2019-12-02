@@ -17,8 +17,8 @@ const PageContent = [
   },
   {
     id: "03",
-    name: "Suosi Julkisia",
-    content: "Kulje auton sijaan jukisilla tai kävellen/pyörällä",
+    name: "Suosi julkisia tai käytä pyörää!",
+    content: "Kulje auton sijaan jukisilla tai kävellen/pyörällä. Se edesauttaa terveitä elämäntapoja, sekä vähentää kustannuksia!",
     img: "../images/moving.jpg"
   },
   {

@@ -31,6 +31,18 @@ const BackGroundImage = styled.div`
 
 const Card = styled.div`
 
+  h1 {
+    font-size: 32px;
+    font-family: 'futura-pt-bold', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  p {
+    font-family: 'futura-pt', sans-serif;
+    font-weight: 400;
+  }
+
 @media only screen and (min-width: 768px) {
 
   position: relative;
@@ -89,7 +101,7 @@ BackGroundImage.defaultProps = {
   }
 }
 
-function ElectricChallenge (props) {
+function ChallengeElectric (props) {
   
   const img = {
     url: props.img
@@ -115,4 +127,4 @@ function ElectricChallenge (props) {
   )
 }
 
-export default ElectricChallenge
+export default ChallengeElectric;
