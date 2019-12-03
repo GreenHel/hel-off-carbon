@@ -57,9 +57,11 @@ const MediaCard = styled.div`
   margin: .5625rem auto 4.25rem;
   /* padding: 3rem; */
 
-  h2 {
-      color: tomato;
-      font-size: 50px;
+  h3 {
+    font-family: 'futura-pt-bold', sans-serif;
+    text-align: center;
+    font-style: normal;
+    font-weight: 300;
   }
 `
 
@@ -68,7 +70,7 @@ function SocialMedia () {
     <Wrapper>
         <MediaCard>
           <InstaGrid account='von_pessi' numberOfMediaElements={3} />
-          <h3>Our social media channels:</h3>
+          <h3>Contact us on social media:</h3>
           <SomeContainer>
             <SomeLeft>
               <a href='https://www.facebook.com/heloffenergy'>

@@ -21,10 +21,9 @@ const FooterContainer = styled.div`
 
 const FooterLeft = styled.div`
   width: 33.333%;
-  text-align: left;
+  text-align: right;
   margin-left: 1em;
-  margin-right: 1em;
-`
+  margin-right: 1em;`
 
 const FooterCenter = styled.div`
   width: 33.333%;
@@ -33,7 +32,7 @@ const FooterCenter = styled.div`
 
 const FooterRight = styled.div`
   width: 33.333%;
-  text-align: right;
+  text-align: left;
   margin-left: 1em;
   margin-right: 1em;
 `
@@ -41,11 +40,22 @@ const FooterRight = styled.div`
 const MediaCard = styled.div`
   font-weight: bold
   margin: .5625rem auto 4.25rem;
+
+  h3, p {
+    font-family: 'futura-pt-bold', sans-serif;
+    text-align: center;
+    font-style: normal;
+    font-weight: 300;
+  }
+
+  p {
+    font-size: 10px;
+  }
 `
 
 const SponsorImage = styled.img`
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 100px;
+  max-height: 50px;
 `
 
 function Footer () {
@@ -80,6 +90,8 @@ function Footer () {
               </a>
             </FooterRight>
           </FooterContainer>
+          <p>© 2019 - hiilineutraalihaaste.fi</p>
+          <p>contact: hiilineutraali@gmail.com</p>
         </MediaCard>
       </div>
     </Wrapper>

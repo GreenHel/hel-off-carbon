@@ -36,6 +36,7 @@ function Home () {
       <Wrapper>
         <Content>
           <div className='title'>HIILINEUTRAALIPÄIVÄ</div>
+          <p className="slogan-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla mattis facilisis. </p>
           <Countdown date={`${year}-12-24T00:00:00`} />
         </Content>
       </Wrapper>
@@ -43,6 +44,8 @@ function Home () {
     
   )
 }
+
+  /* Styled Components */
 
 const Background = styled.div`
   background-color: #2a2a2a;
@@ -59,7 +62,7 @@ const Content = styled.div`
   padding-top: 150px;
 
   @media only screen and (min-width: 768px) {
-  padding-top: 0px;
+  padding-top: 50px;
 }
 `
 
@@ -89,47 +92,44 @@ const Wrapper = styled.div`
   height: 70vh;
 
   div.title {
-    font-size: 30px;
+    font-size: 32px;
     font-family: 'futura-pt-bold', sans-serif;
     text-transform: uppercase;
     font-style: normal;
     font-weight: 700;
     margin-top: 14.5%;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
+    color: #00D8AC
   }
 
-  div.hashtag-title {
-    font-size: 30px;
+  p.slogan-text {
+    height: auto;
+    font-family: 'futura-pt', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    width: 80%;
   }
 
-  div.elements {
-    bottom: 15%;
-  }
+  /* Media Queries for tablet version */
 
-@media
-only screen and (-webkit-min-device-pixel-ratio: 1.5),
-only screen and (-o-min-device-pixel-ratio: 3/2),
-only screen and (min--moz-device-pixel-ratio: 1.5),
-only screen and (min-device-pixel-ratio: 1.5){
-
-  html,
-  body{
-    width:100%;
-    overflow-x:hidden;
-  }
-
-}
-
-  /* @media screen and (min-width: 320px) {
+  @media screen and (min-width: 320px) {
     div.title {
-      font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+      font-size: 32px;
+      width: 95%;
+    }
+
+    p.slogan-text {
+      width: 80%;
+      margin-block-start: 0.5em;
     }
   }
   @media screen and (min-width: 1000px) {
     div.title {
       font-size: 40px;
     }
-  } */
+  }
+
+  /* Countdown element CCS styling */
 
   section {
     display: flex;
