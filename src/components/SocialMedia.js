@@ -1,6 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
 import InstaGrid from './InstaGrid'
+import {
+  TwitterTimelineEmbed,
+  TwitterShareButton,
+  TwitterFollowButton,
+  TwitterHashtagButton,
+  TwitterMentionButton,
+  TwitterTweetEmbed,
+  TwitterMomentShare,
+  TwitterDMButton,
+  TwitterVideoEmbed,
+  TwitterOnAirButton
+} from 'react-twitter-embed'
 
 const Wrapper = styled.div`
   background-color: #2a2a2a;
@@ -16,25 +28,23 @@ const SomeContainer = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  text-align:center;
+  text-align: center;
   margin: 0 auto;
-  justify-content:space-around; 
-  padding: 16px  0 16px 0;
- 
- 
+  justify-content: space-around;
+  padding: 16px 0 16px 0;
+
   a {
     color: pink;
     text-decoration: none;
   }
-  
+
   i {
-      width: 50px;
-      height: 50px;
+    width: 50px;
+    height: 50px;
   }
-  img{
-  max-width: 50px;
-  height: auto;
- 
+  img {
+    max-width: 50px;
+    height: auto;
   }
 `
 
@@ -46,7 +56,6 @@ const SomeLeft = styled.div`
 
 const SomeCenter = styled.div`
   width: 33.333%;
-
 `
 
 const SomeRight = styled.div`
@@ -69,37 +78,36 @@ const MediaCard = styled.div`
 function SocialMedia () {
   return (
     <Wrapper>
-      <div id='social-media'>
         <MediaCard>
-          <h2>@heloffenergy</h2>
-          <p>
-            Join the discussion on the social media channels with the tag
-            #hiilineutraalihelsinki or #hiilineutraalipäivä.
-          </p>
           <InstaGrid account='von_pessi' numberOfMediaElements={3} />
           <h3>Our social media channels:</h3>
           <SomeContainer>
             <SomeLeft>
               <a href='https://www.facebook.com/heloffenergy'>
-                <img src={require('../images/f_logo_RGB-White_100.png')}
-                     alt='Facebook Logo'/>
+                <img
+                  src={require('../images/f_logo_RGB-White_100.png')}
+                  alt='Facebook Logo'
+                />
               </a>
             </SomeLeft>
             <SomeCenter>
               <a href='https://www.instagram.com/heloffenergy'>
-                <img src={require('../images/instagram_logo.png')}
-                     alt='Instagram Logo'/>
+                <img
+                  src={require('../images/instagram_logo.png')}
+                  alt='Instagram Logo'
+                />
               </a>
             </SomeCenter>
             <SomeRight>
               <a href='https://twitter.com/heloffenergy'>
-                <img src={require('../images/Twitter_Logo_WhiteOnImage.png')}
-                     alt='Twitter Logo'/>
+                <img
+                  src={require('../images/Twitter_Logo_WhiteOnImage.png')}
+                  alt='Twitter Logo'
+                />
               </a>
             </SomeRight>
           </SomeContainer>
         </MediaCard>
-      </div>
     </Wrapper>
   )
 }
