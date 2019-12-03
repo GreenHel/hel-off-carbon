@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import ElectricImage from "../images/electric.jpg";
 
 const BackGroundImage = styled.div`
   background: url(${props => props.img.url});
@@ -8,13 +7,9 @@ const BackGroundImage = styled.div`
   height: 290px;
 `;
 
-const TextCard = styled.div`
-  text-align: left;
-  margin: 10%;
-`;
 BackGroundImage.defaultProps = {
   img: {
-    url: "../images/electric.jpg"
+    url: ""
   }
 };
 
