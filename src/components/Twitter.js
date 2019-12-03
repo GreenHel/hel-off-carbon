@@ -20,7 +20,7 @@ function Twitter () {
                 sourceType='url'
                 theme='dark'
                 url='https://twitter.com/HiilineutraaliH'
-                options={{ height: 400 }}
+                options={{ height: 450 }}
                 transparent
                 noHeader
                 noFooter
