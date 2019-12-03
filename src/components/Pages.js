@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import VeganChallenge from "./ChallengeVegan";
-import ElectricChallenge from "./ChallengeElectric";
-import ChallengeMove from "./ChallengeMove";
+import ChallengeCards from "./ChallegeCards";
 import PageContent from "../content/PageContent";
 import ElectricImage from "../images/electric.jpg";
 import VeganImage from "../images/vegan.jpg";
@@ -13,10 +11,10 @@ import EatLessImage from "../images/eatLess.jpg";
 
 function Pages(props) {
   return (
-    <Background>
-      <Wrapper>
-        <ElectricChallenge name={PageContent[0]} img={ElectricImage} />
-        <VeganChallenge name={PageContent[1]} img={VeganImage} />
+    <Background id="bg">
+      <Wrapper id="wrapper">
+        <ChallengeCards name={PageContent[0]} img={ElectricImage} id="electric"/>
+        <ChallengeCards name={PageContent[1]} img={VeganImage} id="vegan" />
         <Popup
           trigger={<h2 className="button"> Did you know ? </h2>}
           modal
@@ -27,7 +25,7 @@ function Pages(props) {
             <PopupComponent name={PageContent[3]} img={EatLessImage} />
           </div>
         </Popup>
-        <ChallengeMove name={PageContent[2]} img={MovingImage} />
+        <ChallengeCards name={PageContent[2]} img={MovingImage} />
       </Wrapper>
     </Background>
   );
@@ -39,7 +37,6 @@ const Background = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 15px;
 `;
 
 Pages.defaultProps = { name: "content" };
@@ -54,13 +51,9 @@ flex-direction: column;
 align-items: center;
 justify-content: space-betweens;
 text-align: center;
+padding: 15px;
 
 }
-
-@media only screen and (max-width: 610px) {
-    flex-direction: column;
-    justify-content: center;
-  }
 
 `;
 

@@ -1,7 +1,6 @@
 import React from "react";
 import Chart from "react-apexcharts";
 import axios from "axios";
-import { whileStatement } from "@babel/types";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 class LineChart extends React.Component {
