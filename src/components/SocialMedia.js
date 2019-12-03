@@ -1,18 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import InstaGrid from './InstaGrid'
-import {
-  TwitterTimelineEmbed,
-  TwitterShareButton,
-  TwitterFollowButton,
-  TwitterHashtagButton,
-  TwitterMentionButton,
-  TwitterTweetEmbed,
-  TwitterMomentShare,
-  TwitterDMButton,
-  TwitterVideoEmbed,
-  TwitterOnAirButton
-} from 'react-twitter-embed'
 
 const Wrapper = styled.div`
   background-color: #2a2a2a;

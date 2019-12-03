@@ -44,7 +44,7 @@ Pages.defaultProps = { name: "content" };
 const Wrapper = styled.div`
 
 min-height: 100vh;
-min-width: 95%;
+width: 100%;
 color: #fff;
 display: flex;
 flex-direction: column;
