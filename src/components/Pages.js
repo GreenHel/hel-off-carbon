@@ -5,10 +5,8 @@ import PageContent from "../content/PageContent";
 import ElectricImage from "../images/electric.jpg";
 import VeganImage from "../images/vegan.jpg";
 import MovingImage from "../images/moving.jpg";
-import Popup from "reactjs-popup";
 import PopupComponent from "./Popup";
 import EatLessImage from "../images/eatLess.jpg";
-import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
 class Pages extends React.Component {
   constructor(props) {
@@ -35,17 +33,11 @@ class Pages extends React.Component {
           </div>
 
           {this.state.showDropdown && (
-            <ReactCSSTransitionGroup
-              transitionName="example"
-              transitionEnterTimeout={500}
-              transitionLeaveTimeout={300}
-            >
-              <PopupComponent
-                name={PageContent[3]}
-                img={EatLessImage}
-                close={this.changeDropdown}
-              />
-            </ReactCSSTransitionGroup>
+            <PopupComponent
+              name={PageContent[3]}
+              img={EatLessImage}
+              close={this.changeDropdown}
+            />
           )}
 
           <ChallengeCards name={PageContent[2]} img={MovingImage} />
