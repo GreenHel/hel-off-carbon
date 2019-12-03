@@ -4,6 +4,7 @@ import Pages from "./Pages";
 import SocialMedia from "./SocialMedia";
 import Footer from "./Footer";
 import MainText from "./MainText";
+import Twitter from "./Twitter";
 
 export default class PageSlider extends React.Component {
   render() {
@@ -13,6 +14,7 @@ export default class PageSlider extends React.Component {
           <Home />
           <MainText />
           <Pages />
+          <Twitter />
           <SocialMedia />
           <Footer />
        </div>

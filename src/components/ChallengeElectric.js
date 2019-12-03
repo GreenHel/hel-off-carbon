@@ -31,6 +31,8 @@ const BackGroundImage = styled.div`
 
 const Card = styled.div`
 
+width: 100%;
+
   h1 {
     font-size: 32px;
     font-family: 'futura-pt-bold', sans-serif;
