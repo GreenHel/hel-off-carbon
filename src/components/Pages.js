@@ -8,27 +8,51 @@ import MovingImage from "../images/moving.jpg";
 import Popup from "reactjs-popup";
 import PopupComponent from "./Popup";
 import EatLessImage from "../images/eatLess.jpg";
+import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
-function Pages(props) {
-  return (
-    <Background id="bg">
-      <Wrapper id="wrapper">
-        <ChallengeCards name={PageContent[0]} img={ElectricImage} id="electric"/>
-        <ChallengeCards name={PageContent[1]} img={VeganImage} id="vegan" />
-        <Popup
-          trigger={<h2 className="button"> Did you know ? </h2>}
-          modal
-          closeOnDocumentClick
-          className="popup"
-        >
-          <div>
-            <PopupComponent name={PageContent[3]} img={EatLessImage} />
+class Pages extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { showDropdown: false };
+  }
+
+  changeDropdown = () => {
+    this.setState({ showDropdown: !this.state.showDropdown });
+  };
+
+  render() {
+    return (
+      <Background id="bg">
+        <Wrapper id="wrapper">
+          <ChallengeCards
+            name={PageContent[0]}
+            img={ElectricImage}
+            id="electric"
+          />
+          <ChallengeCards name={PageContent[1]} img={VeganImage} id="vegan" />
+          <div onClick={this.changeDropdown}>
+            {!this.state.showDropdown && <h2>Did you know ?</h2>}
           </div>
-        </Popup>
-        <ChallengeCards name={PageContent[2]} img={MovingImage} />
-      </Wrapper>
-    </Background>
-  );
+
+          {this.state.showDropdown && (
+            <ReactCSSTransitionGroup
+              transitionName="example"
+              transitionEnterTimeout={500}
+              transitionLeaveTimeout={300}
+            >
+              <PopupComponent
+                name={PageContent[3]}
+                img={EatLessImage}
+                close={this.changeDropdown}
+              />
+            </ReactCSSTransitionGroup>
+          )}
+
+          <ChallengeCards name={PageContent[2]} img={MovingImage} />
+        </Wrapper>
+      </Background>
+    );
+  }
 }
 
 const Background = styled.div`

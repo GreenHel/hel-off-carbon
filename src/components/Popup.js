@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import CloseIcon from "@material-ui/icons/Close";
 
 const BackGroundImage = styled.div`
   background: url(${props => props.img.url});
@@ -19,7 +20,22 @@ function PopupComponent(props) {
   };
 
   return (
-    <div style={{ color: "black", margin: "0 auto", maxWidth: "390px" }}>
+    <div
+      style={{
+        color: "black",
+        margin: "0 auto",
+        maxWidth: "390px",
+        backgroundColor: "white",
+        position: "relative"
+      }}
+    >
+      <CloseIcon
+        onClick={props.close}
+        style={{
+          position: "absolute",
+          right: 0
+        }}
+      />
       <h1>{props.name.name}</h1>
       <section>
         <p>{props.name.content}</p>
