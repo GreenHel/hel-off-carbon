@@ -49,13 +49,13 @@ const MediaCard = styled.div`
   }
 
   p {
-    font-size: 10px;
+    font-size: 13px;
   }
 `
 
 const SponsorImage = styled.img`
   max-width: 100px;
-  max-height: 50px;
+  max-height: 60px;
 `
 
 function Footer () {
