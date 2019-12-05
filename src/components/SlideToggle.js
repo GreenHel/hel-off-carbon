@@ -76,19 +76,20 @@ SlideToggleContent.propTypes = {
 function SlideToggle(props) {
   const [isVisible, setIsVisible] = useState(false);
 
+  console.log(props.name.url)
   return (
-    <>
-      <h1>Tiesitkö ? 😍</h1>
+    <div>
+      <h1>Tiesitkö?</h1>
       <button type="button" onClick={() => setIsVisible(!isVisible)}>
         {isVisible ? "Close" : "Open"} content
       </button>
       <SlideToggleContent isVisible={isVisible}>
-        <>
-          <h2>{props.name.content}</h2>
-          <p>Käytit juuri kaksi AA-paristoa! 🎉😰 </p>
-        </>
+        <div>
+          <p>{props.name.content}</p>
+          <p>Lisää infoa osoitteessa: <a href={props.name.url} style={{textDecoration: 'none', color: 'white'}}>Siirry</a></p>
+        </div>
       </SlideToggleContent>
-    </>
+    </div>
   );
 }
 

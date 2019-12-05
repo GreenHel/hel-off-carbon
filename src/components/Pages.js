@@ -5,8 +5,6 @@ import PageContent from "../content/PageContent";
 import ElectricImage from "../images/electric.jpg";
 import VeganImage from "../images/vegan.jpg";
 import MovingImage from "../images/moving.jpg";
-import PopupComponent from "./Popup";
-import EatLessImage from "../images/eatLess.jpg";
 import SlideToggle from "./SlideToggle";
 
 class Pages extends React.Component {
@@ -28,24 +26,17 @@ class Pages extends React.Component {
             img={ElectricImage}
             id="electric"
           />
+           <SlideToggle 
+            name={PageContent[3]}
+          />
           <ChallengeCards name={PageContent[1]} img={VeganImage} id="vegan" />
-          <div onClick={this.changeDropdown}>
-            {!this.state.showDropdown && <h2>Did you know ?</h2>}
-          </div>
-
           <SlideToggle 
             name={PageContent[4]}
           />
-
-          {this.state.showDropdown && (
-            <PopupComponent
-              name={PageContent[3]}
-              img={EatLessImage}
-              close={this.changeDropdown}
-            />
-          )}
-
           <ChallengeCards name={PageContent[2]} img={MovingImage} />
+          <SlideToggle 
+            name={PageContent[5]}
+          />
         </Wrapper>
       </Background>
     );
