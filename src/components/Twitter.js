@@ -1,18 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
-import {
-  TwitterTimelineEmbed,
-} from 'react-twitter-embed'
+import { TwitterTimelineEmbed } from 'react-twitter-embed'
 
 function Twitter () {
   return (
     <Background>
       <Wrapper>
         <Content>
-        <h1>@hiilineutraalihelsinki</h1>
-          <p>
-            Join the discussion on the social media channels with the tag
-            #hiilineutraalihaaste or #hiilineutraalipäivä.
+          <h1 className='title'>#hiilineutraalipäivä</h1>
+          <p className='title-text'>
+            Tavoitteenamme on lisätä tietoisuutta Helsingin hiilineutraaliin
+            suunnitelmaan vuoteen 2035 mennessä. Liity keskusteluun
+            sosiaalisessa mediassa hashtageilla: #hiilineutraalihaaste or
+            #hiilineutraalipäivä.
           </p>
           <div className='centerContent'>
             <div className='selfCenter standardWidth'>
@@ -46,7 +46,7 @@ const Wrapper = styled.div`
 
 @media only screen and (min-width: 768px) {
 padding: 10%;
-  width: 45%;
+  width: 65%;
   margin-left: auto;
   margin-right: auto;
 `
@@ -57,18 +57,21 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
 
-  h1 {
+  h1.title {
+    color: #00d8ac;
     font-size: 32px;
     font-family: 'futura-pt-bold', sans-serif;
     text-transform: lowercase;
+    text-align: center;
     font-style: normal;
     font-weight: 700;
   }
 
-  p {
+  p.title-text {
     height: auto;
     font-family: 'futura-pt', sans-serif;
     font-weight: 400;
+    margin-bottom: 2em;
   }
 `
 
