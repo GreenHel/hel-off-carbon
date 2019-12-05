@@ -11,16 +11,13 @@ function MainText () {
           <p className='hashtag-text'>
             Mikä meitä estää tekemästä Helsingistä hiilineutraalia nyt?
             Hiilineutraalin Helsingin saamiseksi meidän täytyy yksilöinä tehdä
-            tärkeitä asioita tavoitteen saamiseksi. Ohessa kolme haastetta,
-            jotka auttavat hiilijalanjälkesi pienentämisessä. Lorem ipsum dolor
-            sit amet, consectetur adipiscing elit. Sed fringilla mattis
-            facilisis. Aenean vitae urna tempus, luctus turpis tempus, efficitur
-            justo. Nullam aliquet fermentum leo bibendum commodo. Curabitur eget
-            odio a felis semper venenatis et nec mi. Quisque a lacinia velit, et
-            condimentum felis. Curabitur euismod dui vel lacus efficitur, ac
-            sodales turpis malesuada. Aliquam auctor ante vel purus tristique, a
-            feugiat ipsum accumsan. Fusce eleifend non odio vel bibendum. Aenean
-            justo mi, rhoncus a quam eget, sollicitudin bibendum sapien.
+            tärkeitä asioita tavoitteen saamiseksi. 
+            Alempana on kolme haastetta,
+           <span style={{color:"#00B8AC"}}> joihin haastamme juuri Sinut.</span>
+            <br></br>
+            <br></br>
+            Kun olet tehnyt tietyn haasteen, twiittaa hashtagilla #hiilineutraalihaaste,
+            Arvomme kaikkien osaallistujien kesken huikeita hiilineutraaleita palkintoja.
           </p>
           <TwitterHashtagButton
             tag={'hiilineutraalihaaste'}
@@ -68,6 +65,7 @@ const Content = styled.div`
     height: auto;
     font-family: 'futura-pt', sans-serif;
     font-weight: 400;
+    font-size: 22px;
   }
 `
 

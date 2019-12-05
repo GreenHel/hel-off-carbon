@@ -36,8 +36,9 @@ function Home () {
       <Wrapper>
         <Content>
           <div className='title'>HIILINEUTRAALIPÄIVÄ</div>
-          <p className="slogan-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla mattis facilisis. </p>
-          <Countdown date={`${year}-12-24T00:00:00`} />
+          <p className="slogan-text">Tapahtuma jonka tavoitteena on haastaa jokainen helsinkiläinen elämään yksi päivä hiilineutraalisti.</p>
+          <p className="slogan-text-end">Tapahtuma alkaa:</p>
+          <Countdown date={`${year}-12-30T00:00:00`} />
         </Content>
       </Wrapper>
     </Background>
@@ -102,18 +103,25 @@ const Wrapper = styled.div`
     color: #00D8AC
   }
 
-  p.slogan-text {
+  p.slogan-text, p.slogan-text-end {
     height: auto;
     font-family: 'futura-pt', sans-serif;
     font-weight: 300;
     font-size: 14px;
     width: 80%;
+    font-style: italic;
+  }
+
+  p.slogan-text-end {
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
 
   /* Media Queries for tablet version */
 
   @media screen and (min-width: 320px) {
     div.title {
+      margin-top: 8.5%;
       font-size: 32px;
       width: 95%;
     }
@@ -125,7 +133,15 @@ const Wrapper = styled.div`
   }
   @media screen and (min-width: 1000px) {
     div.title {
-      font-size: 40px;
+      font-size: 50px;
+    }
+
+    p.slogan-text {
+      font-size: 22px;
+    }
+
+    p.slogan-text-end {
+      font-size: 22px;
     }
   }
 

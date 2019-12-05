@@ -34,7 +34,7 @@ const BackGroundImage = styled.div`
     url(${props => props.image});
 
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 
   width: 100%;
   height: 500px;
