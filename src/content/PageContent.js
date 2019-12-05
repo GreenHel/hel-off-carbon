@@ -27,6 +27,10 @@ const PageContent = [
     content:
       "Just cutting down your portion size to the docter-recommended 4 ounces can reduce emission by half",
     img: "../images/eatLess.jpg"
+  },
+  {
+    title: "Did you know?",
+    content: "Props toimii 🎉"
   }
 ];
 

@@ -73,7 +73,7 @@ SlideToggleContent.propTypes = {
   children: node.isRequired
 };
 
-function SlideToggle() {
+function SlideToggle(props) {
   const [isVisible, setIsVisible] = useState(false);
 
   return (
@@ -84,7 +84,7 @@ function SlideToggle() {
       </button>
       <SlideToggleContent isVisible={isVisible}>
         <>
-          <h2>Kun avasit tämän nappulan 🎉</h2>
+          <h2>{props.name.content}</h2>
           <p>Käytit juuri kaksi AA-paristoa! 🎉😰 </p>
         </>
       </SlideToggleContent>

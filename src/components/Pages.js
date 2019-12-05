@@ -33,7 +33,9 @@ class Pages extends React.Component {
             {!this.state.showDropdown && <h2>Did you know ?</h2>}
           </div>
 
-          <SlideToggle />
+          <SlideToggle 
+            name={PageContent[4]}
+          />
 
           {this.state.showDropdown && (
             <PopupComponent
