@@ -1,9 +1,9 @@
 import React from "react";
-import PageSlider from './components/PageSlider'
+import Navigator from './components/Navigator'
 
 
 const App = () => (
-  <PageSlider />
+  <Navigator />
 );
 
 export default App

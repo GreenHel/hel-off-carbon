@@ -73,6 +73,7 @@ const Content = styled.div`
     font-weight: 400;
     margin-bottom: 2em;
   }
+}
 `
 
 export default Twitter

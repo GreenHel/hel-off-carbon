@@ -6,7 +6,7 @@ import Footer from "./Footer";
 import MainText from "./MainText";
 import Twitter from "./Twitter";
 
-export default class PageSlider extends React.Component {
+export default class Navigator extends React.Component {
   render() {
     
     return (

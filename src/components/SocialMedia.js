@@ -21,11 +21,6 @@ const SomeContainer = styled.div`
   justify-content: space-around;
   padding: 16px 0 16px 0;
 
-  a {
-    color: pink;
-    text-decoration: none;
-  }
-
   i {
     width: 50px;
     height: 50px;
@@ -40,6 +35,7 @@ const SomeLeft = styled.div`
   width: 33.333%;
   margin-left: 1em;
   margin-right: 1em;
+  text-align: right;
 `
 
 const SomeCenter = styled.div`
@@ -50,6 +46,7 @@ const SomeRight = styled.div`
   width: 33.333%;
   margin-left: 1em;
   margin-right: 1em;
+  text-align: left;
 `
 
 const MediaCard = styled.div`
@@ -89,7 +86,7 @@ function SocialMedia () {
               </a>
             </SomeCenter>
             <SomeRight>
-              <a href='https://twitter.com/heloffenergy'>
+              <a href='https://twitter.com/HiilineutraaliH'>
                 <img
                   src={require('../images/Twitter_Logo_WhiteOnImage.png')}
                   alt='Twitter Logo'

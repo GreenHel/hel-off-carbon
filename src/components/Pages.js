@@ -7,6 +7,7 @@ import VeganImage from "../images/vegan.jpg";
 import MovingImage from "../images/moving.jpg";
 import PopupComponent from "./Popup";
 import EatLessImage from "../images/eatLess.jpg";
+import SlideToggle from "./SlideToggle";
 
 class Pages extends React.Component {
   constructor(props) {
@@ -31,6 +32,8 @@ class Pages extends React.Component {
           <div onClick={this.changeDropdown}>
             {!this.state.showDropdown && <h2>Did you know ?</h2>}
           </div>
+
+          <SlideToggle />
 
           {this.state.showDropdown && (
             <PopupComponent
