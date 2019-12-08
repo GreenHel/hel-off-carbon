@@ -19,7 +19,7 @@ function getElementHeight(ref) {
 }
 
 /** The children of this component will slide down on mount and will slide up on unmount */
-const SlideToggleContent = ({ isVisible, children, forceSlideIn }) => {
+export const SlideToggleContent = ({ isVisible, children, forceSlideIn }) => {
   const isVisibleOnMount = useRef(isVisible && !forceSlideIn);
   const containerRef = useRef(null);
   const innerRef = useRef(null);
@@ -76,7 +76,7 @@ SlideToggleContent.propTypes = {
 function SlideToggle(props) {
   const [isVisible, setIsVisible] = useState(false);
 
-  console.log(props.name.url)
+  console.log(props.name.url);
   return (
     <div>
       <h1>Tiesitkö?</h1>
@@ -86,11 +86,19 @@ function SlideToggle(props) {
       <SlideToggleContent isVisible={isVisible}>
         <div>
           <p>{props.name.content}</p>
-          <p>Lisää infoa osoitteessa: <a href={props.name.url} style={{textDecoration: 'none', color: 'white'}}>Siirry</a></p>
+          <p>
+            Lisää infoa osoitteessa:{" "}
+            <a
+              href={props.name.url}
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              Siirry
+            </a>
+          </p>
         </div>
       </SlideToggleContent>
     </div>
   );
 }
 
-export default SlideToggle
+export default SlideToggle;

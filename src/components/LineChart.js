@@ -1,107 +1,76 @@
 import React from "react";
-import Chart from "react-apexcharts";
 import axios from "axios";
+import LineChart from "react-linechart";
+import "../../node_modules/react-linechart/dist/styles.css";
+import { SlideToggleContent } from "./SlideToggle";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
-class LineChart extends React.Component {
+class LineChartComponent extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      options: {
-        chart: {
-          zoom: {
-            enabled: false
-          }
-        },
-        dataLabels: {
-          enabled: true,
-          style: {
-            fontSize: "14px",
-            fontFamily: "Helvetica, Arial, sans-serif",
-            colors: "red"
-          }
-        },
-        stroke: {
-          curve: "straight",
-          colors: ["#fff", "transparent"]
-        },
-        title: {
-          text: "Energy Consumption (kWh)",
-          align: "left",
-          style: {
-            fontSize: "20px",
-            color: "white"
-          }
-        },
-        grid: {
-          show: false
-        },
-        yaxis: {
-          lines: {
-            show: false
-          }
-        },
-        xaxis: {
-          lines: {
-            show: false
-          }
-        }
-      },
-      series: [
-        {
-          name: "Desktops",
-          data: [23, 45, 35, 67, 89, 11],
-          style: {
-            fontSize: "20px",
-            color: "white"
-          }
-        }
-      ],
-      responsive: [
-        {
-          breakpoint: 1000,
-          options: {}
-        }
-      ]
+      data: [],
+      isVisible: false
     };
   }
   componentDidMount = async () => {
     const currentMonth = new Date().getMonth();
     const startMonth = currentMonth - 7;
-    const response = await axios.get(
-      "https://cors-anywhere.herokuapp.com/https://nuukacustomerwebapi" +
-        ".azurewebsites.net/api/v2.0/GetMonthlyKPIs/" +
-        "?&building=1748&starttime=2019-" +
-        startMonth +
-        "-1&endtime=2019-" +
-        currentMonth +
-        "-31&kpiids=2&$format=json&$token=" +
-        API_KEY
-    );
-    const data = response.data.map(item => Math.round(item.Value));
-    this.setState({
-      series: [
-        {
-          name: "Desktops",
-          data: data
-        }
-      ]
-    });
+    try {
+      const response = await axios.get(
+        "https://cors-anywhere.herokuapp.com/https://nuukacustomerwebapi" +
+          ".azurewebsites.net/api/v2.0/GetMonthlyKPIs/" +
+          "?&building=1748&starttime=2019-" +
+          startMonth +
+          "-1&endtime=2019-" +
+          currentMonth +
+          "-30&kpiids=2&$format=json&$token=" +
+          API_KEY
+      );
+      const data = response.data.map((item, i) => ({
+        color: "steelblue",
+
+        x: startMonth + i,
+        y: Math.round(item.Value)
+      }));
+
+      this.setState({
+        data: [{ color: "steelblue", points: data }]
+      });
+    } catch (e) {
+      console.log(e);
+    }
   };
 
+  setIsVisible = () => {
+    this.setState({ isVisible: !this.state.isVisible });
+  };
   render() {
     return (
-      <div>
-        <Chart
-          options={this.state.options}
-          series={this.state.series}
-          type="line"
-          width="90%"
-        />
+      <div style={{ marginTop: "30px" }}>
+        <button type="button" onClick={() => this.setIsVisible()}>
+          {this.state.isVisible ? "Close" : "Open"} content
+        </button>
+        <SlideToggleContent isVisible={this.state.isVisible}>
+          <div>
+            <LineChart
+              width={500}
+              height={400}
+              data={this.state.data}
+              xLabel="Month"
+              yLabel="kWh"
+            />
+
+            <p>
+              Monthly electricity consumption of a building in Helsinki in the
+              past 8 months
+            </p>
+          </div>
+        </SlideToggleContent>
       </div>
     );
   }
 }
 
-export default LineChart;
+export default LineChartComponent;
