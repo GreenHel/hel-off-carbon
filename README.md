@@ -1,9 +1,9 @@
 # Hiilineutraalipäivä / Carbon-neutral Day
-Hiilineutraalipäivä on virtuaalinen tapahtumasivu, jonka tarkoituksena oli ratkaista ongelma miten saada ihmiset lisäämään omaa tietoisuuttaan ilmaston muutokseen, sekä nostamaan tietoisuutta Helsingin 2035 hiilineutraalisuunnitelmalle. Tarkoituksenamme on haastaa kaikki helsinkiläiset kolmeen hauskaan ympäristöystävälliseen tehtävään, ja jakamaan tulokset sosiaalisessa mediassa hashtagilla #hiilineutraalipäivä tai #hiilineutraalihaaste.
+[Hiilineutraalipäivä](http://hiilineutraali.herokuapp.com) on virtuaalinen tapahtumasivu, jonka tarkoituksena oli ratkaista ongelma miten saada ihmiset lisäämään omaa tietoisuuttaan ilmaston muutokseen, sekä nostamaan tietoisuutta [Helsingin 2035 hiilineutraalisuunnitelmalle](https://www.hel.fi/static/liitteet/kaupunkiymparisto/julkaisut/julkaisut/HNH-2035-toimenpideohjelma.pdf). Tarkoituksenamme on haastaa kaikki helsinkiläiset kolmeen hauskaan ympäristöystävälliseen tehtävään, ja jakamaan tulokset sosiaalisessa mediassa hashtagilla #hiilineutraalipäivä tai #hiilineutraalihaaste.
 
 Carbon neutral day is a specific virtual day event for Helsinki residents, where we challenge each and every one to take part in our three environmentally concious challenges and share their results under hashtag #hiilineutraalipäivä or #hiilineutraalihaaste.
 
-[View live demo here!](www.hiilineutraali.herokuapp.com)
+[View our live site here!](http://hiilineutraali.herokuapp.com)
 
 ## About
 This project was made for Metropolia University of Applied Sciences Innovation project course using [React](https://reactjs.org/ "React") and bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Installing requires [NodeJS](https://nodejs.org/en/). 
