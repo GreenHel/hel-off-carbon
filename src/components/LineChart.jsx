@@ -3,6 +3,7 @@ import axios from "axios";
 import LineChart from "react-linechart";
 import "../../node_modules/react-linechart/dist/styles.css";
 import { SlideToggleContent } from "./SlideToggle";
+import "../styles/chart.css";
 
 // Importing API-key from Heroku CVARS.
 const API_KEY = process.env.REACT_APP_API_KEY;
@@ -61,11 +62,12 @@ class LineChartComponent extends React.Component {
               data={this.state.data}
               xLabel="Month"
               yLabel="kWh"
+              labelClass="label"
             />
 
             <p>
-              Monthly electricity consumption of a building in Helsinki in the
-              past 8 months
+              Helsingin rakennuksen kuukausittainen sähkönkulutus viimeisen 8
+              kuukauden aikana.
             </p>
           </div>
         </SlideToggleContent>
