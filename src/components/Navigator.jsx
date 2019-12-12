@@ -9,6 +9,8 @@ import Twitter from "./Twitter";
 export default class Navigator extends React.Component {
   render() {
     
+    /* This is the main presentational component, which calls the different components*/
+
     return (
      <div>
           <Home />

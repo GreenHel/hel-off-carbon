@@ -3,11 +3,16 @@ import styled from 'styled-components'
 import Countdown from './Countdown'
 import BGimg from '../images/bg2.png'
 
+// This counts the date on the timer 
+
 const currentDate = new Date()
 const year =
   currentDate.getMonth() === 11 && currentDate.getDate() > 23
     ? currentDate.getFullYear() + 1
     : currentDate.getFullYear()
+
+
+// This draws the 'buildings' on the background
 
 const city = ['0% 0%', '100% 0%', '100% 70%']
 
@@ -30,23 +35,7 @@ for (i = 100; i >= 0; i = i - 2.5) {
 
 const cityParams = city.toString()
 
-function Home () {
-  return (
-    <Background>
-      <Wrapper>
-        <Content>
-          <div className='title'>HIILINEUTRAALIPÄIVÄ</div>
-          <p className="slogan-text">Tapahtuma jonka tavoitteena on haastaa jokainen helsinkiläinen elämään yksi päivä hiilineutraalisti.</p>
-          <p className="slogan-text-end">Tapahtuma alkaa:</p>
-          <Countdown date={`${year}-12-30T00:00:00`} />
-        </Content>
-      </Wrapper>
-    </Background>
-    
-  )
-}
-
-  /* Styled Components */
+/* Styled Components */
 
 const Background = styled.div`
   background-color: #2a2a2a;
@@ -197,5 +186,21 @@ const Wrapper = styled.div`
     }
   }
 `
+
+function Home () {
+  return (
+    <Background>
+      <Wrapper>
+        <Content>
+          <div className='title'>HIILINEUTRAALIPÄIVÄ</div>
+          <p className="slogan-text">Tapahtuma jonka tavoitteena on haastaa jokainen helsinkiläinen elämään yksi päivä hiilineutraalisti.</p>
+          <p className="slogan-text-end">Tapahtuma alkaa:</p>
+          <Countdown date={`${year}-12-30T00:00:00`} />
+        </Content>
+      </Wrapper>
+    </Background>
+    
+  )
+}
 
 export default Home

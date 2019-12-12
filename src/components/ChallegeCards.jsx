@@ -1,6 +1,8 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 
+/* Styled Components */
+
 const CardContainer = styled.div`
 
   width: 100%;

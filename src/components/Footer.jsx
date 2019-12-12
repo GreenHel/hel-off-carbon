@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+/* Styled Components */
+
 const Wrapper = styled.div`
   background-color: #2a2a2a;
   color: #fff;
@@ -9,7 +11,6 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
-  /* border-top: 1px solid rgba(0, 0, 0, 0.0975); */
 `
 
 const FooterContainer = styled.div`
